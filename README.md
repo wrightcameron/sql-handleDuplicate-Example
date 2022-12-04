@@ -1,4 +1,4 @@
-# SQL Duplication Handeling Example
+# SQL Duplication Handling Example
 
 ## Requirements
 
@@ -15,7 +15,7 @@ Creating a postgres database can be done with docker with the following command.
 docker run --rm -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=pass -d postgres
 ```
 
-This setups an empty postgres database, that when stoped will remove all data.  This example doesn't require data to persist so we can add it everytime.
+This setups an empty postgres database, that when stopped will remove all data.  This example doesn't require data to persist so we can add it every time.
 
 ### Accessing Database with psql
 
@@ -33,7 +33,7 @@ Some helpful commands with postgres are.
 * \dt - list tables
 * \d \d+ \<table name> - describe table name
 
-More commands can be found with `man psql` or searching oneline, but the ones above are the most common I use.
+More commands can be found with `man psql` or searching online, but the ones above are the most common I use.
 
 ### Creating Schema
 
@@ -45,10 +45,11 @@ The data to add is in file `./setup/data.sql`.  To add this as well run command,
 
 ## Problem
 
-The satallite SQL database tracks thousands and thousands of satallites in orbit.  This database is used by hundreds of clients to keep track of public records saying who has what in the sky.  There is an issue though, some of the records are showing duplicates.  These duplicates need to be removed, but a single entry needs to remain and which of the duplicates should be the one to remain?
+The satellite SQL database tracks thousands and thousands of satellites in orbit.  This database is used by hundreds of clients to keep track of public records saying who has what in the sky.  There is an issue though, some of the records are showing duplicates.  These duplicates need to be removed, but a single entry needs to remain and which of the duplicates should be the one to remain?
 
 ## Solution
 
 ## Resources
 
 * [Postgres Docker image](https://hub.docker.com/_/postgres/)
+

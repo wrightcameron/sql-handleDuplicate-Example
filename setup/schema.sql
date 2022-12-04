@@ -27,7 +27,8 @@ BEGIN;
         sen_id		uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
         sen_serial	text NOT NULL,
         sen_type	text,
-        sen_manufactor	text
+        sen_manufactor	text,
+	sen_add_on	date NOT NULL DEFAULT now()
     );
 
     CREATE TABLE IF NOT EXISTS company(

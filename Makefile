@@ -1,9 +1,6 @@
 
 build:
-	docker-compose up -d
-	psql -U postgres -h localhost -f ./setup/schema.sql
-	psql -U postgres -h localhost -f ./functions/sprocAddSensor.sql
-	psql -U postgres -h localhost -f ./setup/data.sql
-
+	docker-compose up -d && sleep 5s
+	./setup.sh
 clean:
-	docker stop postgres
+	docker-compose down
